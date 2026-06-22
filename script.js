@@ -1,5 +1,6 @@
 const options = ["Rock", "Paper", "Scissor"];
 
+
 // return random choice for computer from option array
 function getComputerChoice(){
     const randomIndex = Math.floor(Math.random() * options.length);
@@ -8,3 +9,8 @@ function getComputerChoice(){
 }  
 
 
+// prompt user for input and return it
+function getHumanChoice(){
+    const humanChoice = prompt("Whats your choice ?");
+    return humanChoice;
+}
