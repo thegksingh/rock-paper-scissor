@@ -19,3 +19,19 @@ function getHumanChoice(){
     const humanChoice = prompt("Whats your choice ?");
     return humanChoice;
 }
+
+
+// play 1 round and increament score depending on who win
+function playRound(humanChoice , computerChoice){
+    const human = humanChoice.toLowerCase();
+    const computer = computerChoice.toLowerCase();
+    if (human === computer){
+        console.log("It's a tie! both chossed " + computerChoice + ".")
+    }
+    else if ((human === "scissor" && computer === "paper") || (human === "rock" && computer === "scissor") || (human === "paper" && computer === "rock")){
+        console.log("You won! " + humanChoice + " beats " + computerChoice + ".");
+        humanScore++;
+    } else { console.log("You lose! " + computerChoice + " beats " + humanChoice + ".");
+        computerScore++;
+    }
+}
