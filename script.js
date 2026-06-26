@@ -24,11 +24,11 @@ function playRound(humanChoice , computerChoice){
     const human = humanChoice.toLowerCase();
     const computer = computerChoice.toLowerCase();
     if (human === computer){
-        console.log("It's a tie! both chosed " + computerChoice + ".")
+        gameResult.textContent = "It's a tie! both chosed " + computerChoice + ".";
     } else if ((human === "scissor" && computer === "paper") || (human === "rock" && computer === "scissor") || (human === "paper" && computer === "rock")){
-        console.log("You won! " + humanChoice + " beats " + computerChoice + ".");
+        gameResult.textContent = "You won! " + humanChoice + " beats " + computerChoice + ".";
         humanScore++;
-    } else { console.log("You lose! " + computerChoice + " beats " + humanChoice + ".");
+    } else { gameResult.textContent = "You lose! " + computerChoice + " beats " + humanChoice + ".";
         computerScore++;
         }
 }
@@ -36,6 +36,9 @@ function playRound(humanChoice , computerChoice){
 const selectedRock = document.querySelector(".rock");
 const selectedPaper = document.querySelector(".paper");
 const selectedScissor = document.querySelector(".scissor");
+
+const gameResult= document.querySelector(".game-result")
+
 
 selectedRock.addEventListener("click", () => {
     playRound("Rock", getComputerChoice());
@@ -48,3 +51,5 @@ selectedPaper.addEventListener("click", ()=> {
 selectedScissor.addEventListener("click", () => {
     playRound("Scissor", getComputerChoice());
 });
+
+
