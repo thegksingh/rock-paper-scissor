@@ -16,8 +16,8 @@ function getHumanChoice(){
 }
 
 
-    let humanScore = 0;
-    let computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 // play 1 round and increment score depending on who win
 function playRound(humanChoice , computerChoice){
@@ -28,10 +28,26 @@ function playRound(humanChoice , computerChoice){
     } else if ((human === "scissor" && computer === "paper") || (human === "rock" && computer === "scissor") || (human === "paper" && computer === "rock")){
         humanScore++;
         gameResult.innerText = "You won this round! " + humanChoice + " beats " + computerChoice + ".\n Score: Human - " + humanScore + " Computer - " + computerScore;
+        gameOver();
     } else { computerScore++;
         gameResult.innerText = "You lose this round! " + computerChoice + " beats " + humanChoice + ".\nScore: Human - " + humanScore + " Computer - " + computerScore;
-        }
+        gameOver();
+    }
 }
+
+function gameOver(){
+    if (humanScore === 5){
+        gameResult.innerText = "Game Over! You won."
+        humanScore = 0;
+        computerScore = 0;
+    }else if (computerScore === 5){
+        gameResult.innerText = "Game Over! You lose."
+        humanScore = 0;
+        computerScore = 0;
+    }
+}
+
+        
 
 const selectedRock = document.querySelector(".rock");
 const selectedPaper = document.querySelector(".paper");
