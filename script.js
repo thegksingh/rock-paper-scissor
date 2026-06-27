@@ -80,6 +80,12 @@ function updateScore(){
     displayComputerScore.textContent = computerScore;
 }
 
+const playAgain = document.querySelector(".play-again");
+
+playAgain.addEventListener("click", () => {
+    resetScore();
+    updateScore();
+});
 
 
 
