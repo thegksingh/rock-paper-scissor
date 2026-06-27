@@ -38,15 +38,17 @@ function playRound(humanChoice , computerChoice){
 function gameOver(){
     if (humanScore === 5){
         gameResult.innerText = "Game Over! You won."
-        humanScore = 0;
-        computerScore = 0;
+        resetScore();
     }else if (computerScore === 5){
         gameResult.innerText = "Game Over! You lose."
-        humanScore = 0;
-        computerScore = 0;
+        resetScore();
     }
 }
 
+function resetScore(){
+    humanScore = 0;
+    computerScore = 0;
+}
         
 
 const selectedRock = document.querySelector(".rock");
@@ -67,5 +69,6 @@ selectedPaper.addEventListener("click", ()=> {
 selectedScissor.addEventListener("click", () => {
     playRound("Scissor", getComputerChoice());
 });
+
 
 
