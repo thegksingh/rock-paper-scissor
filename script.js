@@ -24,14 +24,14 @@ function playRound(humanChoice , computerChoice){
     const human = humanChoice.toLowerCase();
     const computer = computerChoice.toLowerCase();
     if (human === computer){
-        gameResult.innerText = "It's a tie! both chosed " + computerChoice +  ".\nScore: Human - " + humanScore + " Computer - " + computerScore;
+        gameResult.innerText = "It's a tie! ";
     } else if ((human === "scissor" && computer === "paper") || (human === "rock" && computer === "scissor") || (human === "paper" && computer === "rock")){
         humanScore++;
-        gameResult.innerText = "You won this round! " + humanChoice + " beats " + computerChoice + ".\n Score: Human - " + humanScore + " Computer - " + computerScore;
+        gameResult.innerText = "You won this round! ";
         updateScore();
         gameOver();
     } else { computerScore++;
-        gameResult.innerText = "You lose this round! " + computerChoice + " beats " + humanChoice + ".\nScore: Human - " + humanScore + " Computer - " + computerScore;
+        gameResult.innerText = "You lose this round! ";
         updateScore();
         gameOver();
     }
