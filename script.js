@@ -28,9 +28,11 @@ function playRound(humanChoice , computerChoice){
     } else if ((human === "scissor" && computer === "paper") || (human === "rock" && computer === "scissor") || (human === "paper" && computer === "rock")){
         humanScore++;
         gameResult.innerText = "You won this round! " + humanChoice + " beats " + computerChoice + ".\n Score: Human - " + humanScore + " Computer - " + computerScore;
+        updateScore();
         gameOver();
     } else { computerScore++;
         gameResult.innerText = "You lose this round! " + computerChoice + " beats " + humanChoice + ".\nScore: Human - " + humanScore + " Computer - " + computerScore;
+        updateScore();
         gameOver();
     }
 }
@@ -69,6 +71,15 @@ selectedPaper.addEventListener("click", ()=> {
 selectedScissor.addEventListener("click", () => {
     playRound("Scissor", getComputerChoice());
 });
+
+const displayHumanScore = document.querySelector("#human-score");
+const displayComputerScore = document.querySelector("#computer-score");
+
+function updateScore(){
+    displayHumanScore.textContent = humanScore;
+    displayComputerScore.textContent = computerScore;
+}
+
 
 
 
