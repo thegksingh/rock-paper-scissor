@@ -80,6 +80,8 @@ const playAgain = document.querySelector(".play-again");
 playAgain.addEventListener("click", () => {
     resetScore();
     updateScore();
+    humanChoiceEmoji.textContent = "";
+    computerChoiceEmoji.textContent = "";
 });
 
 
