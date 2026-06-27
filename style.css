@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #F7F1DE;
+    color: #4E220F;
+}
+
+.navbar{
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+a{
+    text-decoration: none;
+    color: #4E220F;
+}
+
+a:hover{
+    color: #9D6638;;
+}
