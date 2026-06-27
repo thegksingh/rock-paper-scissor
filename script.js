@@ -25,13 +25,16 @@ function playRound(humanChoice , computerChoice){
     const computer = computerChoice.toLowerCase();
     if (human === computer){
         gameResult.innerText = "It's a tie! ";
+        showChoice(humanChoice, computerChoice);
     } else if ((human === "scissor" && computer === "paper") || (human === "rock" && computer === "scissor") || (human === "paper" && computer === "rock")){
         humanScore++;
         gameResult.innerText = "You won this round! ";
+        showChoice(humanChoice, computerChoice);
         updateScore();
         gameOver();
     } else { computerScore++;
         gameResult.innerText = "You lose this round! ";
+        showChoice(humanChoice, computerChoice);
         updateScore();
         gameOver();
     }
@@ -88,4 +91,16 @@ playAgain.addEventListener("click", () => {
 });
 
 
+const humanChoiceEmoji = document.querySelector("#user-emoji");
+const computerChoiceEmoji = document.querySelector("#computer-emoji")
 
+const choiceEmojis = {
+    "Rock": "🪨",
+    "Paper": "📄",
+    "Scissor": "✂️"
+};
+
+function showChoice(humanChoice,computerChoice){
+    humanChoiceEmoji.textContent = choiceEmojis[humanChoice];
+    computerChoiceEmoji.textContent = choiceEmojis[computerChoice];
+}
