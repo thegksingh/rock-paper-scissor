@@ -1,7 +1,6 @@
 const options = ["Rock", "Paper", "Scissor"];
 
 
-// return random choice for computer from option array
 function getComputerChoice(){
     const randomIndex = Math.floor(Math.random() * options.length);
     const computerChoice = options[randomIndex];
@@ -9,17 +8,10 @@ function getComputerChoice(){
 }  
 
 
-// prompt user for input and return it
-function getHumanChoice(){
-    const humanChoice = prompt("Whats your choice ?");
-    return humanChoice;
-}
-
-
 let humanScore = 0;
 let computerScore = 0;
 
-// play 1 round and increment score depending on who win
+
 function playRound(humanChoice , computerChoice){
     const human = humanChoice.toLowerCase();
     const computer = computerChoice.toLowerCase();
