@@ -8,6 +8,8 @@
 body{
     background-color: #F7F1DE;
     color: #4E220F;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 18px;
 }
 
 .navbar{
@@ -25,5 +27,124 @@ a{
 }
 
 a:hover{
+    color: #9D6638;;
+}
+
+.game-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.game-section h1{
+    font-size: 80px;
+}
+
+.game-section h3{
+    font-size: 32px;
+}
+
+.score-section{
+    display: flex;
+    justify-content: space-evenly;
+    border: solid 3px #4E220F;
+    background-color:#B0BA99;
+    border-radius: 12px;
+    padding: 15px 40px;
+    max-width: 700px;
+    width: 100%;
+    font-size: 24px;
+
+}
+
+.player-options button{
+    background-color: #B0BA99;
+    color: #4E220F; 
+    border: 2px solid #9D6638; 
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.player-options button:hover {
+    background-color: #9D6638;
+    color: #F7F1DE;
+    transform: translateY(-4px);
+}
+
+.result-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border: solid 3px #9D6638;
+    background-color: #F7F1DE;
+    padding: 30px 30px;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+.choices{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+.choice-box{
+    align-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: solid 3px #9D6638;
+    border-radius: 12px;
+}
+
+
+.round-history{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-shrink: 1;
+    border: solid 3px #4E220F;
+    background-color: #B0BA99;
+    border-radius: 12px;
+    padding: 20px 40px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.round-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.round-history button{
+    padding: 8px;
+    margin-left: auto;
+    background-color: #F7F1DE;
+    border-radius: 12px;
+    border: solid 2px #4E220F;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.round-history button:hover{
     color: #9D6638;;
 }
