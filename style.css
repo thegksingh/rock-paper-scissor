@@ -12,23 +12,6 @@ body{
     font-size: 18px;
 }
 
-.navbar{
-    padding: 30px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 30px;
-    font-weight: 400;
-    font-size: 32px;
-}
-
-a{
-    text-decoration: none;
-    color: #4E220F;
-}
-
-a:hover{
-    color: #9D6638;;
-}
 
 .game-section{
     display: flex;
